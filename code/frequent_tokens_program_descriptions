@@ -1,0 +1,31 @@
+# Note: This is a code snippet I wrote a while back for a different project, will be adapted. 
+
+
+import os
+
+import spacy
+from collections import Counter
+
+nlp = spacy.load("en_core_web_sm")
+
+def get_top_tokens(doc, num_tokens=20):
+    """
+    Get the most frequent tokens in a spacy Doc object.
+
+    Parameters:
+    - doc (spacy.tokens.Doc): The spacy Doc object.
+    - num_tokens (int): Number of top tokens to retrieve. Default is 20.
+
+    Returns:
+    - dict: A dictionary with tokens as keys and their counts as values.
+    """
+    # Ensure the input is a spacy Doc object
+    if not isinstance(doc, spacy.tokens.Doc):
+        raise ValueError("Input must be a spacy Doc object.")
+
+    # We don't want to count punctuation or stopwords
+    token_counts = Counter([token.text for token in doc if not (token.is_stop or token.is_punct)]) 
+    
+    top_tokens = dict(token_counts.most_common(num_tokens))
+
+    return top_tokens
