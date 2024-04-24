@@ -16,8 +16,9 @@ def get_lemmas (text):
         lemma_list (list): list of lemmas (strings, not hashes).
     """
     doc = nlp(text)
-    lemma_list = [token.lemma_ for token in doc if not token.is_stop and token.is_alpha]
-    lemma_string = " ".join(lemma_list)
+    lemma_list = [token.lemma_ for token in doc if not token.is_stop and token.is_alpha] # Remove stop words and non alpha-numerical chars.
+    lemma_string = " ".join(lemma_list).lower()
+    
     
     return lemma_string
 
@@ -39,23 +40,30 @@ def get_unigrams (text):
     unigram_counts = Counter(text.split())    
     return unigram_counts
 
-
-current_dir = os.getcwd()
-parent_dir = os.path.dirname(current_dir)
-csv_file_path = os.path.join('data', 'program_descriptions.csv')
+def main():
+    filename = 'program_descriptions.csv'
+    parent_dir_file = 'data'   
     
-df = pd.read_csv(csv_file_path)
+    csv_file_path = os.path.join(parent_dir_file, filename)
+    df = pd.read_csv(csv_file_path)
 
-full_text = ""
 
-columns_to_check = ["program description"]
-full_text= df.to_string(columns= columns_to_check)
-
-print(full_text[:10])
+    columns_to_check = ["program description"]
+    all_program_descriptions= df.to_string(columns= columns_to_check)
+    lemma_text = get_lemmas(all_program_descriptions)
     
-     
+    # Final Counters of uni and bigrams.
+    unigrams = (get_unigrams(lemma_text))
+    bigrams = get_bigrams(lemma_text)
     
 
-    
-# You'll need to lemmatize them before getting the uni and bigrams. 
-#lemma_text = get_lemmas(text)
+
+    # Peak the outputs.
+    print(f" Most common unigrams and their counts:\n", unigrams.most_common(15) )
+    print()
+    print(f" Most common bigrams and their counts:\n", bigrams.most_common(10) )
+    print()
+    print("For a full list refer to LLM_BIAS/data/frequent_unigrams and LLM_BIAS/data/frequent_bigrams ")
+
+if __name__ == "__main__":
+    main()
