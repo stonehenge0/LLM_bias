@@ -2,12 +2,10 @@ import os
 
 import spacy
 import pandas as pd
-import csv
 from nltk import ngrams
 from collections import Counter
 
 nlp = spacy.load("en_core_web_sm")
-txt = "test"
 
 
 def get_lemmas (text):
@@ -40,21 +38,24 @@ def get_unigrams (text):
     
     unigram_counts = Counter(text.split())    
     return unigram_counts
- 
-    
-    
+
+
 current_dir = os.getcwd()
 parent_dir = os.path.dirname(current_dir)
-csv_file_path = os.path.join(parent_dir, 'data', 'program_descriptions.csv')
+csv_file_path = os.path.join('data', 'program_descriptions.csv')
     
-program_descriptions = pd.read_csv(csv_file_path)
+df = pd.read_csv(csv_file_path)
 
-print(program_descriptions.head())
+full_text = ""
+
+columns_to_check = ["program description"]
+full_text= df.to_string(columns= columns_to_check)
+
+print(full_text[:10])
+    
+     
+    
 
     
 # You'll need to lemmatize them before getting the uni and bigrams. 
 #lemma_text = get_lemmas(text)
-
-
-if __name__ == "__main__":
-    main()
