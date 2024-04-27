@@ -1,7 +1,9 @@
+# this is not finished, first draft :) 
+
 import os 
 import re
 
-test = "colorless ambitious ideas sleep furiously." # chomsky would smile.
+test = "colorless ambitious ideas sleep furiously." # Make Chomsky proud.
 
 # right now these are just toy words.  
 male_words = ["ambition", "aggression", "excellence"]
@@ -21,9 +23,6 @@ def count_matches(expression, text):
     return len(matches)
 
 
-expression = r'anyword*' # cries in but-how-do-i-put-my-variable-in-ther        
+expression = r'anyword*' # cries in but-what-escape-character-is-not-used-in-regex       
     
-
-      
-    
-print(count_matches(expression, test))  # Output: 3
+print(count_matches(expression, test))  
