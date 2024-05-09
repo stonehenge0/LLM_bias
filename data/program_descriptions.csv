@@ -1,5 +1,5 @@
-program name,program description,dominant gender immatriculation
-m-euroculture,"The study programme
+program-id,program name,program description,dominant gender immatriculation
+100,m-euroculture,"The study programme
 
 Euroculture is a two-year master's programme that offers specialized knowledge and methodological and social competence which help students to work in a problem- and project-oriented way even beyond the usual subject-specific limitations, and to present the results in an adequate manner. The MA supports students in familiarizing with the methodology of interdisciplinary research and offers in-depth understanding of political, sociological, historical, or cultural-scientific point of view. Our students will – at the end of their studies – be able to analyse European integration processes in an independent, interdisciplinary and problem-oriented way and to judge the effects that regional, national and supranational cooperation and conflicts of the past have on current developments and the dynamics in Europe.
 
@@ -14,7 +14,7 @@ Career & Alumni
 The Euroculture programme gives students a chance to prepare themselves to enter new professions that come into being due to the intensifying process of economic and political integration in Europe. Euroculture serves to qualify graduates to take up professions that require sound knowledge of European culture, current transnational developments in European society and politics in a global context, and the European integration process. Some of the possible professions are work with European institutions and organisations, with institutions of teaching, research and further education, the media and journalism, librarianship, foundations and associations, culture management, museums and collections, tourism, foreigner and migrant counselling, public relations, and human resource management (especially in international companies).
 
 The most recent Euroculture Alumni Report has shown that Euroculture graduates find their first relevant job in no time: 70% secure a job within the first 3 months after graduation, and the rest mostly within 6 months after graduation. This is a very positive result, that shows how well the programme equips its students with skills necessary for the job market. Especially such practical courses like Project Management, and the experience our students acquire working in international teams help the Euroculture alumni be successful.",f
-m-art-history,"Programme description
+101,m-art-history,"Programme description
 
 Based on the skills acquired in the Bachelor's programme, the M.A. programme in Art History expands and deepens the methodological repertoire as well as the knowledge of objects with regard to technique, genre and epoch of their creation as well as reception. Various study options are offered for this purpose (for details, see the chapter on study structure):
 
@@ -36,7 +36,7 @@ In Göttingen, the Department of Art History works closely with the university c
 Occupational fields
 
 The Master's programme in Art History prepares students for a broad professional field. This includes work in museums, in the preservation of historical monuments and in universities, but also in galleries, in the art trade, in tourism, in publishing houses, newspapers, media institutions, insurance companies and in all areas of cultural management. In the specialisation Curatorial Studies, graduates are especially introduced to working at museums and collections of classical and modern art at home and abroad, in the art trade, galleries and auction houses. The degree programme also qualifies students for an academic career at universities and non-university research institutions in the subject and - beyond the professional fields mentioned - is also an entry requirement for the doctoral programme in art history.",f
-m-clinical-psychology,"Presentation of the study programme
+102,m-clinical-psychology,"Presentation of the study programme
 
 In the consecutive Master's programme in Clinical Psychology and Psychotherapy, existing basic knowledge is specifically deepened. In addition to the sound methodological training, the degree programme allows a high degree of specialisation and profile formation. The competences acquired in the Bachelor's programme can be expanded, especially in the field of psychotherapy. The overarching qualification goal of the Master's degree programme is to prepare students for psychotherapeutic work.
 
@@ -56,7 +56,7 @@ In addition to previous knowledge of natural sciences and interest in a degree p
 Occupational fields
 
 The primary field of activity for graduates of this degree programme is psychotherapy in the outpatient and inpatient care of mental disorders. Other fields of activity include diagnostics and intervention in areas such as counselling facilities, rehabilitation facilities, prevention facilities, (occupational) health care or as an expert witness as well as an administrator in the health care sector and as a psychotherapy researcher",f
-m-diversity-studies-social-sciences,"The programme
+103,m-diversity-studies-social-sciences,"The programme
 
 Students are encouraged to develop awareness towards their own situatedness and approach to diversity. They also learn to design and implement diversity trainings.
 
@@ -66,7 +66,7 @@ The courses are taught in German language. A sufficient German language proficie
 Career prospects
 
 The knowledge and competences taught in this Master's programme qualify graduates for positions in various fields in public and private institutions. Possible career paths include working as diversity or equal opportunities officers and consultancy, especially in the occupational fields of social integration, personnel and services management, intercultural opening and organizational development. Potential employers include businesses, university and science management, NGOs, political parties, social and educational establishments and international organizations. This Master's degree programme also provides students with the competencies required to pursue a PhD.",f
-b-world-literature,"Programme description                
+104,b-world-literature,"Programme description                
                                 
                                 
                                         
@@ -90,7 +90,7 @@ Translator
 Writer
 Editor
 Manager of literary and art festivals, museums, fairs and exhibitions.",f
-b-appl-computer-science,"What is Computer Science?
+105,b-appl-computer-science,"What is Computer Science?
 
 Computer Science is the science of systematic and automated processing of information. It deals with the structures, characteristics and description possibilities of information and information processing as well as the set-up, working methods and construction principles of computer systems. General working methods in information processing and general methods of their application in different fields are explored. Contents also include the development of experimental and product-oriented information processing systems of modern conception. Computer Science can be subdivided into the areas of Theoretical Computer Science, Practical Computer Science, Technical Computer Sciences as well as Applied Computer Science.
 
@@ -123,7 +123,7 @@ Computer scientists are needed in more and more disciplines. They work in banks,
  Research and teaching
 
 By choosing an application subject in the Applied Computer Science degree programme, possible occupational fields become even more differentiated. The career opportunities for graduates of Applied Computer Science are excellent due to the interdisciplinary study programme.",m
-m-appl-computer-science,"Program Description
+106,m-appl-computer-science,"Program Description
 Computer science is the science of systematic and automated processing of information. It deals with the structures, characteristics and possibilities to describe information and information processing as well as the setup, working method and construction principles of computer systems. General procedural methods of information processing and general methods of their application are researched. The programme contents include the development of modern experimental and product oriented information processing systems. Computer science can be divided into the areas of theoretical computer science, practical computer science, technical computer science as well as applied computer science.
 Students will deal with the possibilities of structuring, formalisation and mathematization of application areas in the form of special models and simulations. They will acquire knowledge in engineering development of software systems for different areas of application with special consideration of high adaptability and the man-computer interaction of such systems.
 The programme aims to convey extensive knowledge in the subject of computer science in theory and practice as well as with reference to an application subject. This comprises methods to solve application problems and their realization in an appropriate computer form.
@@ -138,7 +138,7 @@ further development and adaptation of application systems and networks
 consulting and training
 research and development
 Different fields of work are also possible depending on the application subject. Career prospects for graduates of Applied Computer Science are very good due to the interdisciplinary programme.",m
-b-business-informatics,"General information: What is it all about?
+107,b-business-informatics,"General information: What is it all about?
 
 As an interdisciplinary subject, the business information systems degree programme is composed of economic content, primarily business administration, informatics content, and additional business informatics content. Information management, system development and system selection as well as (business) application systems, for example, are fundamental subfields of the business information systems degree programme. In your studies, you will deal with topics such as the design of application systems, mobile applications, data management and machine learning. The generous elective area gives you the opportunity to get to know many different subject areas in order to discover new interests - also through modules outside of business informatics and economics.
 
@@ -173,12 +173,12 @@ Core occupations for graduates of the Bachelor's programme in Business Informati
 Moreover, bachelor degree holders can work in hybrid occupations as so-called hybrid experts, i.e. individuals who are familiar with business problems and are capable of designing IT solutions. These individuals are often employed in a coordinating function between the operating department and the IT department. Project managers, project coordinators and system analysts are some examples of specific professions. Fields that graduates can work in include either those (1) within the data processing (DP) department (for example, system analysis, user consulting, DP control) or (2) outside the DP department in business-oriented operational departments with distinct DP references, such as organisation.
 
 Get to know the different professional fields of our graduates in the alumni portraits .",m
-b-physics,"Programme overview
+108,b-physics,"Programme overview
 
 Our Bachelor degree program aims to provide students with a broad education in physics and neighboring disciplines. The curriculum has a strong emphasis in math and physics. The career opportunities for physics graduates are as diverse as the field itself. They include: research and development, management or administration in industrial laboratories or technical sales, electronic design or laser instrument research. Physics graduates may also enter a wide variety of graduate programs; for example Condensed Matter & Materials Sciences, Astro- and Particle Physics and Biophysics and Complex systems.
 
 The classes of physics require a good basis of physics, mathematics, chemistry, and at a higher level English. This basis is the Abiturwissen of a basic physics course in German high school. Not all students take mathematics up to the end of school. We offer a preparatory course which is intended to bring all freshmen up to the same level. We highly recommend this class to students. It is currently only available in German.",m
-m-appl-data-science,"Program Description
+109,m-appl-data-science,"Program Description
 Data science is the frontier of the modern competitive landscape, a field where expertise turns raw data into strategic power. In Göttingen, our master's programme is engineered for those who thrive on solving complex problems. It's not just about mastering the core disciplines of Mathematics, Computer Science, and Statistics; it's about wielding these skills like a craftsman to extract actionable insights across various domains. Our programme is tailored for those ready to lead in Computational Neuroscience, Bioinformatics, Medical Data Science, and Digital Humanities—with more innovative fields on the horizon.
 Our commitment is to forge leaders in data science. This means not only deep-diving into the analytics and methodologies that drive the digital age but also ensuring you're equipped to manage and spearhead research projects with autonomy. We emphasize the critical skill of articulating your discoveries, grounding your work in ethical considerations, and understanding the broader implications of data-driven decision-making.
 Through rigorous research orientation and hands-on internships, we connect you with industry frontrunners, preparing you to navigate and influence the technological challenges of our times. This programme is your gateway to becoming a pivotal player in any sector, ready to harness the power of data to forge new paths and drive innovation.
@@ -186,12 +186,12 @@ General Information
 Göttingen is a hub where interdisciplinary prowess in Data Science meets practical application. Our programme is designed to arm you with the methodologies and insights to excel in dynamic fields, from Computational Neuroscience to Digital Humanities. Each track is a collaboration with leading departments and institutes, ensuring a rich, cross-disciplinary learning experience.
 Occupational fields
 In an era where Data Scientists are the new elite, our graduates are the architects of the future, crafting solutions in sectors as diverse as manufacturing, finance, healthcare, and academia. With a mastery of data science, your career possibilities are limitless, opening doors to leadership roles in innovation-driven companies, groundbreaking research institutions, and beyond. For those with a vision to reshape industries, our programme is your launchpad to achieving a doctorate and leading the charge in data-driven transformation.",m
-b-philosophy,"Subject description
+110,b-philosophy,"Subject description
 
 Philosophy deals with the fundamental question of theoretical world interpretation and practical formation of life. It examines aspects that can be clarified through methodical contemplation. In order to do so, the ability to logically analyse abstract theoretical problems as well as to argument logically correctly must be acquired. The course of study comprises systematic parts (theoretical and practical philosophy) as well as historical (history of philosophy). Disciplines belonging to theoretical philosophy are epistemology, scientific theory, philosophy of language, philosophy of mind as well as aesthetics. Practical parts include, among others, ethics, political philosophy, law and social philosophy. The historical part is studied using selected texts of classic philosophic authors and based on philosophical-historical epochs.
 
 Studies in the two-subject bachelor's programme aim to make the students appropriately comprehend problems and conceptions of philosophy, deal with them scientifically and to communicate their basic principles in a manner understandable to all. The graduates should especially have the skills to appropriately use the scientific aids of the study of philosophy, to understand and apply methods of philosophical thought and argumentation, to understand and classify philosophical texts in their historical interpretation and systematic connection, deal with philosophical problems of intermediate difficulty in written and oral form with precise terminology, and to weigh arguments against each other in an appropriate manner",n
-b-musicology,"What does musicology do?                                                                  
+111,b-musicology,"What does musicology do?                                                                  
                                                                 
 Music is not just something people listen to or do: it is also something people study. Musicology is the science of music: it is about finding out what music actually is, how it works, and what it means to people. And it is about fundamentally thinking about what we can learn about people, their culture, their history(s) and their webs of relationships through music.                                
 Musicology views music as a human practice that has a wide variety of forms and meanings through the diversity of the world's cultures and historical change. At the Göttingen Department of Musicology, we are convinced that there is not one music, but many musics. Music can be studied in many manifestations: as a communicative expression, as a system of knowledge, as part of cultural action and cultural identity. Music can be analysed as a work of art or as a function of a social network within a society. Music can be used as a medium for feelings, ideas and self-understandings, or as an instrument of (powerlessness) power.
@@ -215,7 +215,7 @@ Completion of a Bachelor's degree in Musicology will qualify you for a great var
                                         
 Recommended prior knowledge in music                                                                  
 You should have sufficient basic knowledge of music (musical terminology, notation) and musical theory (intervals, keys, chords). Basic skills in playing instruments or singing will be of advantage. You should also be experienced in listening to a wide range of different styles of music. ",n
-b-archeology,"subject/content/objectives
+112,b-archeology,"subject/content/objectives
                                         
 They are introduced to Greek, Roman and Byzantine culture and ancient history through introductory lectures and tutorials. The degree programme takes into account the current academic trend towards cultural anthropological questions and interdisciplinary field research. This is achieved by means of integrative cultural-comparative courses in cooperation with neighbouring disciplines as well as high practical components. You can take internal and external practical courses, for example in excavation technology, surveying technology, drawing and photographic object documentation, digital image processing, ceramic analysis and restoration, moulding techniques, museology, monument preservation, archaeological science journalism with the corresponding career-qualifying perspectives.
                                         
@@ -239,14 +239,14 @@ The multifaceted study of archaeology in Göttingen creates the best opportuniti
                                 
 occupational fields
 The programme conveys knowledge as well as methodical and practical skills, enabling graduates to qualify for occupations in the fields of youth and adult education, culture management, tourism, publishing houses, the press, new media, diplomatic institutions, international organisations, etc. Graduates also have the possibility to continue their studies in a Master's programme to prepare themselves for a scientific career path in fields related to museums, the conservation of ancient monuments, universities as well as non-university research institutions.",n
-b-business-and-human-resource-education,"general information: what is is all about?
+113,b-business-and-human-resource-education,"general information: what is is all about?
 This interdisciplinary programme in Business and Human Resource Education primarily prepares students for a job as teachers at vocational schools. Students with the professional goal of becoming Teachers at vocational schools have to follow the Master's programme in Business and Human Resource Education after their bachelor's degree and can then enter the German school system (Referendariat).
 Through the interdisciplinary combination of economics, pedagogy as well as another freely selectable teaching subject, our bachelor's programme integrates different subject perspectives. In this way, you learn to integrate information and findings from different disciplines in order to look at issues from an economic, pedagogical and educational policy perspective. This enables you to gain a holistic understanding of the topics and promotes an interdisciplinary approach that will help you in your day-to-day professional practice.
 Specialised knowledge is not enough to be successful in teaching in vocational schools or in business. Our degree programme therefore provides you with the skills you need: For example, the basics of teaching and learning, didactic skills such as communicating complex content in a comprehensible way or giving constructive feedback, but also organisational knowledge, for example, about the structure and processes in the vocational training system or about education management issues. You can apply this directly in practice. Furthermore, you will complete an internship (usually in vocational schools) during your studies in which you will put your theoretical knowledge into practice and gain insights into real work processes.
 
 career opportunities
 The polyvalent orientation of our bachelor's programme opens up a variety of career paths for you. For example, it qualifies you for the Master’s degree in Business and Human Resource Education, which allows you to work at state vocational schools or in education management in public administration, such as ministries of education or school boards, after graduation. With the bachelor's degree, a job in the economy is open to you - for example, in the personnel development of companies or with independent educational providers and private educational institutions.",n
-m-forest-science,"Programme description
+114,m-forest-science,"Programme description
 
 Study contents provide hands-on approaches to tackle burning current issues such as global change, climate warming, land use change, species loss and biodiversity treats. The studies cover ecosystems analysis and modelling with in-dept training in advanced programming, data analysis as well as theoretical ecology and practical conservation management. Research-based training on terrestrial ecosystems function from molecules to landscape level and laboratory methods in ecosystems sciences and sustainable management of tropical and international forests where students together prepare an interdisciplinary management plan on-site. Throughout their studies, students will take part in cutting- edge research activities on these topics in an interdisciplinary and international environment.
 Goals
