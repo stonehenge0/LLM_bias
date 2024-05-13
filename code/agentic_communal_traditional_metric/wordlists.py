@@ -1,3 +1,5 @@
+"""These are the wordlists for masculine/feminine words from Gaucher et al."""
+
 feminine_coded_words = [
     "affectionate",
     "child", 

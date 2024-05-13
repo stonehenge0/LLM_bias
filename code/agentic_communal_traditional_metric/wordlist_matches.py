@@ -1,6 +1,9 @@
 # Inspiration for this script is the genderdecoder package: https://github.com/Doteveryone/genderdecoder
 # The package itself is inspired by Kat Matfield's gender decoder: https://github.com/lovedaybrooke/gender-decoder 
 
+"""This script takes in the program descriptions and gives back 
+a dictionary with two lists of the male and female  coded words in the original program descriptions."""
+
 import os
 
 import spacy 

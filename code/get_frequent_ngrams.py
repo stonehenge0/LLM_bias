@@ -1,3 +1,7 @@
+"""Extract frequent unigrams and bigrams. Was used for extracting those across the original 
+program descriptions, but can obviously be reused for all the other ones. """
+
+
 import os
 
 import spacy
