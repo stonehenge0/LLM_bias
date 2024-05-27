@@ -55,20 +55,20 @@ def calculate_metric_score(dictionary_both_genders_wordlists):
     """
 
     # Extract gendered wordlists from the returns of the get_wordlist_matches function.
-    masculine_wordlist = list(dictionary_both_genders_wordlists.keys())[0]
-    feminine_wordlist = list(dictionary_both_genders_wordlists.keys())[1]
+    masculine_wordlist = list(dictionary_both_genders_wordlists.values())[0]
+    feminine_wordlist = list(dictionary_both_genders_wordlists.values())[1]
 
     count_feminine = len(feminine_wordlist)
     count_masculine = len(masculine_wordlist)
 
-    total_count_gendered_words = count_feminine + count_masculine
+    total_count_gendered_words = (
+        count_feminine + count_masculine
+    )  # Normalize for textlength?
 
     # Avoid errors because of division by zero if neither female nor male words are found.
     if total_count_gendered_words != 0:
 
-        final_metric_score = (
-            count_feminine - count_masculine
-        ) / total_count_gendered_words
+        final_metric_score = count_feminine - count_masculine
 
     else:
         final_metric_score = 0
@@ -85,21 +85,14 @@ def main():
     df = pd.read_csv(absolute_file_path)
 
     # Clean the program descriptions, extract gendered words and calculate the final metric score.
-    df["gendercoded words"] = df["program description"].apply(lambda x: preprocess(x))
-    df["gendercoded words"] = df["gendercoded words"].apply(
-        lambda x: get_wordlist_matches(x)
-    )
-    df["agentic communal score"] = df[
-        "gendercoded words"
-    ].apply  # Hier dann den Namen von dem Ding oben einfügen
+    df["gendercoded words"] = df["program description"].apply(preprocess)
+    df["gendercoded words"] = df["gendercoded words"].apply(get_wordlist_matches)
+    df["agentic communal score"] = df["gendercoded words"].apply(calculate_metric_score)
 
-    output_file = "gendercoded_wordlists_results.csv"
+    output_file = "results_agentic_communal_metric.csv"
     df.to_csv(output_file, index=False)
     print("Output has been written to:\t", output_file)
 
 
 if __name__ == "__main__":
     main()
-
-# Check that the functin and everything actually works
-# If it does, replace this output with the one currently in the "data" repo.
