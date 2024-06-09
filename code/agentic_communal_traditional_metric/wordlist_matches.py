@@ -41,7 +41,6 @@ def get_wordlist_matches(in_text):
 
 def main():
 
-    # Read in the dataframe. Change that this is hardcoded.
 
     # Define the relative path to the file
     file_path = os.path.join("data", "program_descriptions.csv")
