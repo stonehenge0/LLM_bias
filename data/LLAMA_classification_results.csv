@@ -1,0 +1,86 @@
+Program-id,program description,LLAMA classification full  json
+100,m-euroculture,"{
+""classification"" : ""neutral"",
+""reasoning"" : ""The text does not contain any overtly gendered language or stereotypes. The use of'students' and 'graduates' is gender-neutral, and the description of the program's goals and outcomes does not favor one gender over the other. The mention of careers such as diplomacy, international business, and journalism may be slightly more appealing to men, but the inclusion of cultural management, librarianship, and human resource management balances this out. The emphasis on intercultural communication, teamwork, and leadership skills is also gender-neutral. The only potential issue is the use of the phrase'make a difference', which may be slightly more masculine-coded, but this is a minor factor. Overall, the text is written in a neutral and inclusive tone."",
+""confidence rating"" : ""high""
+}"
+101,m-art-history,"{
+""classification"" : ""neutral"",
+""reasoning"" : ""The text does not contain any language that is overtly male- or female-oriented. The description is focused on the program's content, structure, and career opportunities, without using gendered language or stereotypes. The use of words like'students' and 'graduates' is gender-neutral, and there are no references to traditionally male- or female-dominated fields. The only potential bias is the mention of 'collecting and dealing with works of art', which could be seen as slightly male-oriented due to the historical association of art collecting with wealthy male patrons. However, this is a minor point, and the overall tone of the text is neutral."",
+""confidence rating"" : ""high""
+}"
+102,m-clinical-psychology,"{
+""classification"" : ""neutral"",
+""reasoning"" : ""The text does not contain any language that explicitly or implicitly favors one gender over the other. The use of'students' and 'patients' is gender-neutral, and the competences listed are relevant to the field of Clinical Psychology and Psychotherapy without any gendered connotations. The phrase 'What you should bring with you' could be seen as slightly informal, but it is not gender-specific. The occupational fields listed are also neutral, as they do not imply a specific gender role or stereotype."",
+""confidence rating"" : ""high""
+}"
+103,m-diversity-studies-social-sciences,"{ ""classification"" : ""neutral"", ""reasoning"" : ""The text does not contain any language that explicitly favors or disfavors a particular gender. The use of the phrase'students are encouraged' is inclusive and inviting, and the description of the program's goals and outcomes is focused on the development of professional skills and knowledge. The language is formal and academic, but does not contain any gendered pronouns or stereotypes. The career prospects mentioned are diverse and do not seem to be biased towards a particular gender. The only potential issue is the use of the term 'officers', which could be seen as slightly more masculine, but it is not a dominant feature of the text."", ""confidence rating"" : ""high"" }"
+104,b-world-literature,"{
+""classification"" : ""neutral"",
+""reasoning"" : ""The text does not contain any overtly gendered language or stereotypes. The use of words like 'literature', 'culture', and 'global' are neutral and inclusive. The career opportunities listed are diverse and do not lean towards traditionally male or female professions. The only slight inclination towards a more masculine tone is the use of the word'manager', which has historically been associated with male roles, but this is not enough to sway the classification. The text's focus on literary analysis, cultural understanding, and professional development is appealing to individuals of all genders."",
+""confidence rating"" : ""high""
+}"
+105,b-appl-computer-science,"{
+""classification"" : ""moderately male oriented"",
+""reasoning"" : ""The text uses language that is more commonly associated with male-dominated fields, such as 'engineering','mathematical formal', and'man-computer-interaction'. Additionally, the text mentions 'computer games' and 'robots' as examples of career opportunities, which may be more appealing to male students. Furthermore, the text assumes a level of prior knowledge of computers and mathematics, which may be more common among male students. However, the text also mentions 'biology, economics, medicine or the humanities' as potential areas of interest, which may appeal to female students. The text also emphasizes the importance of teamwork, which is a skill often associated with female students."",
+""confidence rating"" : ""medium""
+}"
+106,m-appl-computer-science,"{
+""classification"" : ""moderately male oriented"",
+""reasoning"" : ""The text uses language that is neutral in terms of gender, but there are some subtle factors that may lean towards a male-oriented tone. Firstly, the use of the phrase'man-computer interaction' may be seen as gendered, although it is a widely accepted term in the field. Additionally, the examples of occupational fields and typical fields of work may be perceived as traditionally male-dominated, such as developing computer games and working in industrial companies. However, the text also mentions fields like medicine and biotechnology, which may be seen as more inclusive. Furthermore, the language used is formal and objective, without any overtly masculine or feminine tone. Overall, while the text is not strongly male-oriented, it may subtly lean towards a male audience."",
+""confidence rating"" : ""medium""
+}"
+107,b-business-informatics,"{
+""classification"" : ""moderately male oriented"",
+""reasoning"" : ""The text uses language that may subtly appeal more to men than women, although it is not overtly gendered. Factors contributing to this classification include:
+
+    The use of words like'system', 'development', 'design', and 'architecture', which may be more commonly associated with male-dominated fields like engineering and technology.
+    The emphasis on 'practical and cutting-edge content' and 'up-to-date knowledge', which may appeal more to men who are often socialized to value technical skills and competitiveness.
+    The mention of'mathematics' and 'information and communications systems' as prerequisites, which may be areas where men are more likely to have prior experience or confidence.
+    The career perspectives section lists jobs like 'computer specialists','system analysts', and'software developers', which are traditionally male-dominated professions.
+    The use of phrases like 'will to achieve' and 'analytical thinking faculties', which may be more commonly associated with masculine stereotypes.
+    However, it's worth noting that the text also includes some neutral language and phrases that could appeal to women, such as the emphasis on 'interdisciplinary' study and the mention of 'hybrid occupations' that combine business and IT skills.
+    "",
+    ""confidence rating"" : ""medium""
+    }
+"
+108,b-physics,"{
+""classification"" : ""moderately male oriented"",
+""reasoning"" : ""The text uses language and examples that may subtly disencourage female students from applying. Firstly, the list of career opportunities is dominated by traditionally male-dominated fields such as research and development, management, and technical sales. While these fields are not exclusively male, they have historically been associated with men. Additionally, the mention of 'laser instrument research' and 'electronic design' may evoke stereotypes of male-dominated industries. Furthermore, the text assumes a prior knowledge of physics and mathematics, which may be more common among male students. The offer of a preparatory course may be seen as a positive step, but the fact that it is only available in German may be a barrier for international students, who may be more likely to be female. On the other hand, the text does not contain overtly masculine language or imagery, and the mention of 'Biophysics and Complex systems' may appeal to students with a more interdisciplinary approach, which may be more appealing to female students."",
+""confidence rating"" : ""medium""
+}"
+109,m-appl-data-science,"{
+""classification"" : ""moderately male oriented"",
+""reasoning"" : ""The text uses language that may subtly appeal more to men than women, although it is not strongly male-oriented. Factors contributing to this classification include:
+
+    The use of words like 'frontier', 'competitive landscape','strategic power', 'craftsman', 'lead', 'forge leaders', and 'pivotal player', which may evoke a sense of competition and leadership, traditionally associated with masculine traits.
+    The emphasis on'solving complex problems' and 'wielding skills' may also appeal more to men, who are often socialized to value problem-solving and technical skills.
+    The mention of 'industry frontrunners' and 'leadership roles' may also contribute to a male-oriented tone, as these roles are often associated with men.
+    However, the text also includes some neutral and female-oriented elements, such as:
+    The emphasis on 'articulating discoveries', 'ethical considerations', and 'broader implications', which may appeal more to women, who are often socialized to value communication and empathy.
+    The mention of 'collaboration' and 'cross-disciplinary learning experience' may also appeal more to women, who are often socialized to value teamwork and cooperation.
+    The inclusion of fields like 'Digital Humanities' and 'Bioinformatics' may also attract women, who are often underrepresented in STEM fields but may be more interested in these areas."",
+    ""confidence rating"" : ""medium""
+    }
+"
+110,b-philosophy,"{
+""classification"" : ""moderately male oriented"",
+""reasoning"" : ""The language used in the description is formal and academic, which may appeal more to traditional masculine norms of intellectual pursuits. The emphasis on 'logical analysis', 'abstract theoretical problems', and 'argumentation' may also subtly favor male students who are socialized to value these skills. Additionally, the use of words like 'ystematic', 'ethodical', and 'precise' may reinforce stereotypes of masculinity. However, the description also mentions 'aesthetics' and 'ocial philosophy', which could appeal to female students. Overall, while the language is not overtly exclusionary, it may still subtly favor male students."",
+""confidence rating"" : ""medium""
+}"
+111,b-musicology,"{
+""classification"" : ""neutral"",
+""reasoning"" : ""The text does not contain any overtly gendered language or stereotypes. The use of 'people' and 'human practice' is inclusive, and the description of musicology as a field of study is neutral. The mention of 'cultural action and cultural identity' could be seen as slightly more appealing to female students, who are often more interested in social and cultural aspects of a field, but this is a minor factor. The list of research methods and occupational fields is diverse and does not contain any gendered language. The recommended prior knowledge in music is also neutral, focusing on musical skills and knowledge rather than any gender-specific traits."",
+""confidence rating"" : ""high""
+}"
+112,b-archeology,"{
+""classification"" : ""moderately male oriented"",
+""reasoning"" : ""The text uses language that is generally neutral, but there are some subtle factors that may lean towards a male-oriented tone. Firstly, the mention of 'excavation technology' and'surveying technology' may be more appealing to males who are traditionally more interested in technical fields. Additionally, the emphasis on 'practical components' and 'field research projects' may also be more appealing to males who tend to be more interested in hands-on activities. Furthermore, the mention of'moulding techniques' and'restoration workshop' may also be more appealing to males who are traditionally more interested in manual crafts. However, it's worth noting that the text also mentions 'gender' as one of the research foci, which may be more appealing to females. Overall, while the text is not strongly male-oriented, it has some subtle biases that may make it more appealing to males."",
+""confidence rating"" : ""medium""
+}"
+113,b-business-and-human-resource-education,"{
+""classification"" : ""moderately male oriented"",
+""reasoning"" : ""The text uses language that is generally neutral, but there are some subtle cues that may lean towards a male-oriented tone. Firstly, the mention of 'teachers at vocational schools' and 'business' may evoke traditional male-dominated fields. Additionally, the emphasis on 'organisational knowledge' and 'education management issues' may appeal more to masculine stereotypes. Furthermore, the phrase 'put your theoretical knowledge into practice' may imply a more hands-on, practical approach that is often associated with male-dominated fields. However, the text also highlights 'pedagogy' and 'didactic skills', which are often associated with more feminine traits. The overall tone is still professional and neutral, but these subtle cues may give it a slightly male-oriented lean."",
+""confidence rating"" : ""medium""
+}"
+114,m-forest-science,"{ ""classification"" : ""neutral"", ""reasoning"" : ""The text does not contain any overtly gendered language or stereotypes. The use of words like 'hands-on', 'burning', and 'cutting-edge' might be seen as slightly masculine-coded, but they are used in a context that is neutral and focused on the scientific and academic aspects of the program. The language is formal and objective, and the descriptions of the specializations and courses are detailed and technical, without any emotional or sensationalist tone. The use of words like 'complex', 'interdisciplinary', and 'quantitative' might appeal more to individuals with a strong analytical background, but this does not necessarily skew towards a specific gender. The text also avoids any language that might be seen as overly nurturing or caregiving, which could be stereotypically associated with femininity. Overall, the text presents a neutral and academic tone that should appeal to individuals from all genders who are interested in the field of study."", ""confidence rating"" : ""high"" }"
