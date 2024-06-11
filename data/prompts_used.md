@@ -21,6 +21,12 @@ You will find the prompts for:
 
 **accessed over**: OpenAI API (commercial)
 
+**seed** : 42
+
+**temperature**: 1 
+
+> temperature in the OpenAI API is a value between 0 and 2
+
 a) male-targeted prompt
 ```
 You are the coordinator and responsible for writing academic program descriptions for
