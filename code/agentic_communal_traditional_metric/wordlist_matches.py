@@ -25,7 +25,7 @@ def preprocess(input_text):
 def get_wordlist_matches(in_text):
     """Find all matches of gender-coded words and return male and female coded wordlists."""
 
-    # Go through all the words in the input text and returns that word if it starts with any of the
+    # Go through all the words in the input text and return a word if it starts with any of the
     # gender coded stems from the wordlists script.
     masculine_coded_words = [
         word
@@ -51,7 +51,7 @@ def calculate_metric_score(dictionary_both_genders_wordlists):
     """
     Calculate the result of the agentic/communal metric by weighting the amount of female and male
     words.
-    The first argument has to be the male list, the second one has to be the female wordlist.
+    The first argument of the input dictionary has to be the male list, the second one has to be the female wordlist.
     """
 
     # Extract gendered wordlists from the returns of the get_wordlist_matches function.
@@ -78,8 +78,7 @@ def calculate_metric_score(dictionary_both_genders_wordlists):
 
 def main():
 
-
-    # Define the relative path to the file
+    # Read in file.
     file_path = os.path.join("data", "program_descriptions.csv")
     absolute_file_path = os.path.abspath(file_path)
 
