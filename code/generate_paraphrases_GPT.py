@@ -10,6 +10,7 @@ client = OpenAI()  # Requires an OpenAI API key.
 
 # The three functions are almost identical, except the passage that targets the different genders.
 # But just grammatically it wasn't possible to combine them into one function and have the prompts be grammatically correct.
+# So it looks a bit redundant on first glance.
 
 
 def paraphrase_as_f(program_description):

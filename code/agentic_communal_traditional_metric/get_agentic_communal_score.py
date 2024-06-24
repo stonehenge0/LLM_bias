@@ -47,11 +47,13 @@ def get_wordlist_matches(in_text):
     }
 
 
-def calculate_metric_score(dictionary_both_genders_wordlists):
+def calculate_metric_score(
+    dictionary_both_genders_wordlists, num_words_in_program_description
+):
     """
     Calculate the result of the agentic/communal metric by weighting the amount of female and male
     words.
-    The first argument of the input dictionary has to be the male list, the second one has to be the female wordlist.
+    The first argument of the input dict has to be the male list, the second one has to be the female wordlist.
     """
 
     # Extract gendered wordlists from the returns of the get_wordlist_matches function.
@@ -61,14 +63,14 @@ def calculate_metric_score(dictionary_both_genders_wordlists):
     count_feminine = len(feminine_wordlist)
     count_masculine = len(masculine_wordlist)
 
-    total_count_gendered_words = (
-        count_feminine + count_masculine
-    )  # Normalize for textlength?
+    total_count_gendered_words = count_feminine + count_masculine
 
     # Avoid errors because of division by zero if neither female nor male words are found.
     if total_count_gendered_words != 0:
 
-        final_metric_score = count_feminine - count_masculine
+        final_metric_score = (
+            (count_feminine - count_masculine) / num_words_in_program_description
+        ) * 100  # multiply by 100 just to make the final scores more readable.
 
     else:
         final_metric_score = 0
@@ -84,11 +86,18 @@ def main():
 
     df = pd.read_csv(absolute_file_path)
 
-    # Clean the program descriptions, extract gendered words and calculate the final metric score.
+    # Clean the program descriptions, get gendercoded wordmatches, normalize and calculate final score.
     df["gendercoded words"] = df["program description"].apply(preprocess)
+    df["wordcount program description"] = df["gendercoded words"].apply(len)
     df["gendercoded words"] = df["gendercoded words"].apply(get_wordlist_matches)
-    df["agentic communal score"] = df["gendercoded words"].apply(calculate_metric_score)
+    df["agentic communal score"] = df.apply(
+        lambda row: calculate_metric_score(
+            row["gendercoded words"], row["wordcount program description"]
+        ),
+        axis=1,
+    )
 
+    # output and save the file.
     output_file = "results_agentic_communal_metric.csv"
     df.to_csv(output_file, index=False)
     print("Output has been written to:\t", output_file)
