@@ -81,13 +81,12 @@ def calculate_metric_score(
 def main():
 
     # Read in file.
-    file_path = os.path.join("data", "program_descriptions.csv")
-    absolute_file_path = os.path.abspath(file_path)
 
-    df = pd.read_csv(absolute_file_path)
+    file_path = "data/rearranged_paraphrased_program_descriptions.csv"
+    df = pd.read_csv(file_path)
 
     # Clean the program descriptions, get gendercoded wordmatches, normalize and calculate final score.
-    df["gendercoded words"] = df["program description"].apply(preprocess)
+    df["gendercoded words"] = df["paraphrased program description"].apply(preprocess)
     df["wordcount program description"] = df["gendercoded words"].apply(len)
     df["gendercoded words"] = df["gendercoded words"].apply(get_wordlist_matches)
     df["agentic communal score"] = df.apply(
@@ -98,7 +97,7 @@ def main():
     )
 
     # output and save the file.
-    output_file = "results_agentic_communal_metric.csv"
+    output_file = "p_results_agentic_communal_metric.csv"
     df.to_csv(output_file, index=False)
     print("Output has been written to:\t", output_file)
 

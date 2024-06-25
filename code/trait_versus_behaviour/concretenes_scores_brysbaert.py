@@ -51,7 +51,7 @@ def main():
 
     # Read in program descriptions and the brysbaert dataset.
     program_descriptions_df = pd.read_csv(
-        "code/trait_versus_behaviour/program_descriptions.csv"
+        "data/rearranged_paraphrased_program_descriptions.csv"
     )
 
     brysbaert_df = pd.read_csv(
@@ -60,13 +60,13 @@ def main():
 
     # Generate clean wordlists from the program descriptions ang calculate final score for each description.
     program_descriptions_df["cleaned wordlists"] = program_descriptions_df[
-        "program description"
+        "paraphrased program description"  # HIER
     ].apply(text_to_clean_wordlist)
     program_descriptions_df["brysbaert score"] = program_descriptions_df[
         "cleaned wordlists"
     ].apply(lambda x: get_brysbaert_concreteness_ratings(brysbaert_df, x))
 
-    filename_out = "results_trait_behavior.csv"
+    filename_out = "p_results_trait_behavior.csv"
     program_descriptions_df.to_csv(filename_out)
     print(f"File has been written to:\t", filename_out)
 
