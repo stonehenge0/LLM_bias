@@ -7,7 +7,7 @@ import pandas as pd
 load_dotenv()
 
 # API configuration
-api_key = "6dbb280fd71955606a00948b5b64b797"
+api_key = # YOUR API KEY
 base_url = "https://chat-ai.academiccloud.de/v1"  # This runs over resources provided by the University of Göttingen. See: https://kisski.gwdg.de/
 model = "meta-llama-3-70b-instruct"
 
