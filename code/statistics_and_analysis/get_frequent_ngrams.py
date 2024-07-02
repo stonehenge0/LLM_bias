@@ -1,6 +1,4 @@
-"""Extract frequent unigrams and bigrams. Was used for extracting those across the original 
-program descriptions, but can obviously be reused for all the other ones. """
-
+"""Extract frequent unigrams and bigrams. """
 
 import os
 
@@ -12,62 +10,69 @@ from collections import Counter
 nlp = spacy.load("en_core_web_sm")
 
 
-def get_lemmas (text):
+def get_lemmas(text):
     """Get lemmas from a string. Removes stopwords and non alpha chars.
     Args:
-        text (string)  
-    Output: 
-        lemma_list (list): list of lemmas (strings, not hashes).
+        text (string)
+    Output:
+        lemma_list (list): list of lemmas.
     """
     doc = nlp(text)
-    lemma_list = [token.lemma_ for token in doc if not token.is_stop and token.is_alpha] # Remove stop words and non alpha-numerical chars.
+    lemma_list = [
+        token.lemma_ for token in doc if not token.is_stop and token.is_alpha
+    ]  # Remove stop words and non alpha-numerical chars.
     lemma_string = " ".join(lemma_list).lower()
-    
-    
+
     return lemma_string
 
-def get_bigrams (text, n = 2): 
-    """Get bi-grams. 
+
+def get_bigrams(text, n=2):
+    """Get bi-grams.
     ---
     text (string):
     n (int): scope of the n-grams. Per default this is bigrams, but can be overriden for trigrams etc.
-    
-    output """
-    
+
+    output"""
 
     ngram_counts = Counter(ngrams(text.split(), n))
-    return(ngram_counts)
+    return ngram_counts
 
-def get_unigrams (text): 
+
+def get_unigrams(text):
     """Get unigrams with counts how often they occur."""
-    
-    unigram_counts = Counter(text.split())    
+
+    unigram_counts = Counter(text.split())
     return unigram_counts
 
+
 def main():
-    filename = 'program_descriptions.csv'
-    parent_dir_file = 'data'   
-    
+    filename = "paraphrased_program_descriptions.csv"
+    parent_dir_file = "data"
+
     csv_file_path = os.path.join(parent_dir_file, filename)
     df = pd.read_csv(csv_file_path)
 
-
-    columns_to_check = ["program description"]
-    all_program_descriptions= df.to_string(columns= columns_to_check)
+    columns_to_check = ["paraphrased neutral"]
+    all_program_descriptions = df.to_string(columns=columns_to_check)
     lemma_text = get_lemmas(all_program_descriptions)
-    
+
     # Final Counters of uni and bigrams.
-    unigrams = (get_unigrams(lemma_text))
-    bigrams = get_bigrams(lemma_text)
-    
+    unigrams = str(
+        get_unigrams(lemma_text).most_common(40)
+    )  # Take only the most 49 frequent unigrams and 30 frequent bigrams
+    bigrams = str(get_bigrams(lemma_text).most_common(30))
 
+    output_file = "common_ngrams_p_neutral.txt"
 
-    # Peak the outputs.
-    print(f" Most common unigrams and their counts:\n", unigrams.most_common(15) )
+    with open(output_file, "a") as file:
+        # Write the string to the file
+        file.write(unigrams)
+        file.write(bigrams)
+
     print()
-    print(f" Most common bigrams and their counts:\n", bigrams.most_common(10) )
+    print("Output saved to: ", output_file)
     print()
-    print("For a full list refer to LLM_BIAS/data/frequent_unigrams and LLM_BIAS/data/frequent_bigrams ")
+
 
 if __name__ == "__main__":
     main()
