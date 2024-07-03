@@ -4,7 +4,9 @@ import seaborn as sns
 import numpy as np
 
 
-def subtract_lists_and_plot_histogram(values_paraphrased, values_original):
+def subtract_lists_and_plot_histogram(
+    values_paraphrased, values_original, ax, title, xlim
+):
     # Check if the lists are of equal length
     if len(values_paraphrased) != len(values_original):
         raise ValueError("Both lists must be of the same length.")
@@ -12,35 +14,31 @@ def subtract_lists_and_plot_histogram(values_paraphrased, values_original):
     # Subtract elements of list1 from list2
     result = [val1 - val2 for val1, val2 in zip(values_paraphrased, values_original)]
 
-    # Calculate median and average
+    # Get median and average
     median_value = np.median(result)
     mean_value = np.mean(result)
 
     # Plot the resulting values as a histogram using seaborn
-    plt.figure(figsize=(10, 6))
-    sns.histplot(result, bins=10, kde=False, color="skyblue")
-    plt.axvline(
+    sns.histplot(result, bins=15, kde=False, ax=ax)
+    ax.axvline(
         median_value,
         color="red",
         linestyle="dashed",
         linewidth=1.5,
         label=f"Median: {median_value:.2f}",
     )
-    plt.axvline(
+    ax.axvline(
         mean_value,
         color="green",
         linestyle="dashed",
         linewidth=1.5,
         label=f"Mean: {mean_value:.2f}",
     )
-    plt.title(
-        "Changes of Agentic/Communal Values in Paraphrased Female Program Descriptions"
-    )
-    plt.xlabel("Difference in agentic/communal Value")
-    plt.ylabel("Frequency")
-    plt.legend()
-    plt.grid(True)
-    plt.show()
+    ax.set_title(title)
+    ax.set_xlabel("Difference in agentic/communal Value")
+    ax.set_ylabel("Frequency")
+    ax.legend()
+    ax.set_xlim(xlim)
 
     return result
 
@@ -63,9 +61,33 @@ df_neutral = paraphrased_pds_df[
 
 # Extract the agentic/communal scores from the paraphrased program descriptions.
 p_female_score = df_female["agentic communal score"]
+p_male_score = df_male["agentic communal score"]
+p_neutral_score = df_neutral["agentic communal score"]
 
-# Do some testing.
-l1 = [2, -2, 0, 0, 0]  # paraphrased
-l2 = [-1, -1, 0, 1, -1]  # original
+# Calculate global x-axis limits
+all_results = [val1 - val2 for val1, val2 in zip(p_female_score, scores_original)] + [
+    val1 - val2 for val1, val2 in zip(p_male_score, scores_original)
+]
 
-print(subtract_lists_and_plot_histogram(p_female_score, scores_original))
+global_min = min(all_results)
+global_max = max(all_results)
+xlim = (global_min, global_max)
+
+# Create subplots
+fig, axs = plt.subplots(3, 1, figsize=(12, 12))
+
+# Plot each histogram
+subtract_lists_and_plot_histogram(
+    p_male_score, scores_original, axs[0], "Paraphrased Male", xlim
+)
+subtract_lists_and_plot_histogram(
+    p_female_score, scores_original, axs[1], "Paraphrased Female", xlim
+)
+subtract_lists_and_plot_histogram(
+    p_neutral_score, scores_original, axs[2], "Paraphrased Female", xlim
+)
+
+
+# Adjust layout
+plt.tight_layout()
+plt.show()
