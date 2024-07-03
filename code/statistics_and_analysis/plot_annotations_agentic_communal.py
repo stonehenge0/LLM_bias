@@ -24,7 +24,6 @@ def extract_classification(json_string):
 # Read in data
 llama_p_results_df = pd.read_csv("results/p_results_LLAMA_classification.csv")
 agentic_results_df = pd.read_csv("results/1p_results_agentic_communal.csv")
-# trait_results_df = pd.read_csv("results/p_results_agentic_communal.csv")
 
 # Extract the string annotation form the original json API output.
 llama_p_results_df["string LLAMA classification result"] = llama_p_results_df[
@@ -40,11 +39,11 @@ metric_classification_count = agentic_results_df[
 ].value_counts()
 
 #################
-llama_classification_count = json_data1 = {
+llama_classification_count = {
     "moderately female oriented": 0,
     "moderately male oriented": 4,
     "neutral": 11,
-    "strongy female oriented": 0,
+    "strongly female oriented": 0,
     "strongly male oriented": 0,
 }
 
@@ -52,7 +51,7 @@ metric_classification_count = {
     "moderately female oriented": 3,
     "moderately male oriented": 5,
     "neutral": 4,
-    "strongy female oriented": 0,
+    "strongly female oriented": 0,
     "strongly male oriented": 3,
 }
 
@@ -66,6 +65,21 @@ df2 = pd.DataFrame(
 
 # Merge the DataFrames on the 'Category' column
 merged_df = pd.merge(df1, df2, on="Category", how="outer").fillna(0)
+
+# Reorder categories (example order)
+category_order = [
+    "strongly male oriented",
+    "moderately male oriented",
+    "neutral",
+    "moderately female oriented",
+    "strongly female oriented",
+]
+
+# Sort the DataFrame based on the new order
+merged_df["Category"] = pd.Categorical(
+    merged_df["Category"], categories=category_order, ordered=True
+)
+merged_df = merged_df.sort_values("Category")
 
 # Define color sets
 color_sets = [
@@ -81,15 +95,15 @@ color_sets = [
     ["#808000", "#F0E68C"],  # Olive and Khaki
 ]
 
-# Example usage: plot with the first color set
-colors = color_sets[0]  # Choose the first set (Teal and Coral)
+# Plot with the chosen color set
+colors = color_sets[8]  # Choose the first set (Teal and Coral)
 
 # Plot the data
 ax = merged_df.plot(
     kind="bar",
     x="Category",
     y=["LLAMA_Count", "Metric_Count"],
-    figsize=(10, 6),
+    figsize=(10, 9),
     width=0.8,
     color=colors,
 )
@@ -97,15 +111,23 @@ ax = merged_df.plot(
 # Set the labels and title with increased font size
 ax.set_xlabel("Category", fontsize=14)
 ax.set_ylabel("Number of Annotations", fontsize=14)
-ax.set_title("Comparison of Category Annotations by LLAMA and Metric", fontsize=16)
+ax.set_title(
+    "Comparison of Category Annotations by LLAMA and agentic/communal", fontsize=16
+)
 
 # Customize the legend with increased font size
 plt.legend(
-    title="Annotations", labels=["LLAMA", "Metric"], fontsize=14, title_fontsize=16
+    title="Annotations",
+    labels=["LLAMA", "agentic/communal"],
+    fontsize=14,
+    title_fontsize=16,
 )
 
 # Increase the font size of category labels on the x-axis
 ax.tick_params(axis="x", labelsize=14)
+
+# Rotate x-axis labels diagonally
+plt.xticks(rotation=45, ha="right")
 
 # Add annotations with increased font size
 for p in ax.patches:
@@ -122,4 +144,3 @@ for p in ax.patches:
 # Show the plot
 plt.tight_layout()
 plt.show()
-##################

@@ -74,7 +74,7 @@ global_max = max(all_results)
 xlim = (global_min, global_max)
 
 # Create subplots
-fig, axs = plt.subplots(3, 1, figsize=(12, 12))
+fig, axs = plt.subplots(3, 1, figsize=(12, 12), sharey=True)
 
 # Plot each histogram
 subtract_lists_and_plot_histogram(
@@ -84,7 +84,7 @@ subtract_lists_and_plot_histogram(
     p_female_score, scores_original, axs[1], "Paraphrased Female", xlim
 )
 subtract_lists_and_plot_histogram(
-    p_neutral_score, scores_original, axs[2], "Paraphrased Female", xlim
+    p_neutral_score, scores_original, axs[2], "Paraphrased Neutral", xlim
 )
 
 

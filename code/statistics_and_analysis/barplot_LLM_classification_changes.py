@@ -116,7 +116,7 @@ p_neutral_score = df_neutral["LLAMA string classification"]
 xlim = (-1, 4)
 
 # Create subplots
-fig, axs = plt.subplots(3, 1, figsize=(12, 20))
+fig, axs = plt.subplots(3, 1, figsize=(12, 20), sharey=True)
 
 # Plot each histogram
 subtract_lists_and_plot_barplot(
@@ -129,6 +129,7 @@ subtract_lists_and_plot_barplot(
 subtract_lists_and_plot_barplot(
     p_neutral_score, scores_original, axs[2], "Paraphrased Neutral", xlim
 )
+
 
 # Adjust layout
 plt.tight_layout()
