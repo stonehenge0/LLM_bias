@@ -94,22 +94,9 @@ merged_df["Category"] = pd.Categorical(
 )
 merged_df = merged_df.sort_values("Category")
 
-# Define color sets
-color_sets = [
-    ["#008080", "#FF7F50"],  # Teal and Coral
-    ["#000080", "#FFD700"],  # Navy and Gold
-    ["#228B22", "#90EE90"],  # Forest Green and Light Green
-    ["#8B0000", "#FFDAB9"],  # Dark Red and Peach
-    ["#191970", "#87CEEB"],  # Midnight Blue and Sky Blue
-    ["#2F4F4F", "#778899"],  # Dark Slate Gray and Light Slate Gray
-    ["#DDA0DD", "#EEE8AA"],  # Plum and Pale Goldenrod
-    ["#DC143C", "#DB7093"],  # Crimson and Pale Violet Red
-    ["#4169E1", "#B0C4DE"],  # Royal Blue and Light Steel Blue
-    ["#808000", "#F0E68C"],  # Olive and Khaki
-]
 
 # Plot with the chosen color set
-colors = color_sets[8]  # Choose the first set (Teal and Coral)
+colors = ["#4169E1", "#B0C4DE"]
 
 # Plot the data
 ax = merged_df.plot(
