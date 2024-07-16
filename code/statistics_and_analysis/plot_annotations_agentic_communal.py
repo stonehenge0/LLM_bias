@@ -31,15 +31,15 @@ llama_p_results_df["string LLAMA classification result"] = llama_p_results_df[
 ].apply(extract_classification)
 
 # Count how often each category was annotated for the metric versus LLAMA.
-llama_classification_count = llama_p_results_df[
-    "string LLAMA classification result"
-].value_counts()
-metric_classification_count = agentic_results_df[
-    "categorical agentic communal score"
-].value_counts()
+llama_classification_count = (
+    llama_p_results_df["string LLAMA classification result"].value_counts().to_dict()
+)
+metric_classification_count = (
+    agentic_results_df["categorical agentic communal score"].value_counts().to_dict()
+)
 
-#################
-llama_classification_count = {
+# Provided JSON data
+llama_classification_count1 = {
     "moderately female oriented": 0,
     "moderately male oriented": 4,
     "neutral": 11,
@@ -47,7 +47,7 @@ llama_classification_count = {
     "strongly male oriented": 0,
 }
 
-metric_classification_count = {
+metric_classification_count1 = {
     "moderately female oriented": 3,
     "moderately male oriented": 5,
     "neutral": 4,
@@ -55,7 +55,20 @@ metric_classification_count = {
     "strongly male oriented": 3,
 }
 
-# Convert JSON data to DataFrame
+# Combine counts
+for key in llama_classification_count1:
+    if key in llama_classification_count:
+        llama_classification_count[key] += llama_classification_count1[key]
+    else:
+        llama_classification_count[key] = llama_classification_count1[key]
+
+for key in metric_classification_count1:
+    if key in metric_classification_count:
+        metric_classification_count[key] += metric_classification_count1[key]
+    else:
+        metric_classification_count[key] = metric_classification_count1[key]
+
+# Convert combined counts to DataFrame
 df1 = pd.DataFrame(
     list(llama_classification_count.items()), columns=["Category", "LLAMA_Count"]
 )
@@ -109,37 +122,40 @@ ax = merged_df.plot(
 )
 
 # Set the labels and title with increased font size
-ax.set_xlabel("Category", fontsize=14)
-ax.set_ylabel("Number of Annotations", fontsize=14)
+ax.set_xlabel("Category", fontsize=16)
+ax.set_ylabel("Number of Annotations", fontsize=16)
 ax.set_title(
-    "Comparison of Category Annotations by LLAMA and agentic/communal", fontsize=16
+    "Comparison of Category Annotations by LLAMA and agentic/communal:all program descriptions",
+    fontsize=18,
 )
 
 # Customize the legend with increased font size
 plt.legend(
     title="Annotations",
     labels=["LLAMA", "agentic/communal"],
-    fontsize=14,
-    title_fontsize=16,
+    fontsize=16,
+    title_fontsize=18,
 )
 
 # Increase the font size of category labels on the x-axis
-ax.tick_params(axis="x", labelsize=14)
+ax.tick_params(axis="x", labelsize=16)
 
 # Rotate x-axis labels diagonally
 plt.xticks(rotation=45, ha="right")
 
 # Add annotations with increased font size
 for p in ax.patches:
-    ax.annotate(
-        f"{int(p.get_height())}",
-        (p.get_x() + p.get_width() / 2.0, p.get_height()),
-        ha="center",
-        va="center",
-        xytext=(0, 10),
-        textcoords="offset points",
-        fontsize=14,
-    )
+    height = p.get_height()
+    if height > 0:
+        ax.annotate(
+            f"{int(height)}",
+            (p.get_x() + p.get_width() / 2.0, p.get_height() + p.get_y()),
+            ha="center",
+            va="center",
+            xytext=(0, 10),
+            textcoords="offset points",
+            fontsize=16,
+        )
 
 # Show the plot
 plt.tight_layout()
