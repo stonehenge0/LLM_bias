@@ -37,10 +37,4 @@ Another major point of consideration was to make picking a high-quality charity 
 
 
 ## Data Sources/ Acknowledgements
-Charity evaluation data was collected from
-* [GiveWell](https://www.givewell.org/)
-* [Giving What We Can](https://www.givingwhatwecan.org/)
-* [Deutsches Institut für soziale Fragen](https://www.dzi.de/)
-* [Animal Charity Evaluators](https://animalcharityevaluators.org/)
 
-> See [LICENSE](LICENSE.txt).
