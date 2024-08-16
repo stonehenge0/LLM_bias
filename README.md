@@ -5,7 +5,7 @@
 
 <center>
 <div style="width:100%;text-align:center;">
-<img src='https://github.com/stonehenge0/Open_Sourcerers/blob/main/docs/static/Apfelkuchen.jpg' width="197" height="167">  
+<img src='data/llama_picture_readme' width="197" height="167">  
 </div>
 </center>
 
