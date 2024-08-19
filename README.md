@@ -9,22 +9,11 @@
 </div>
 </center>
 
-
-# Final presentation
-https://docs.google.com/presentation/d/1W9WDpjblKqI7NbVhbs1zIHmNB68DqaqjX7LX9M4YqHg/edit?usp=sharing
-
 ---
-## Charity Picker
-The ApplePy Charity pickers helps you find a charity to donate to. Over our website, the user can enter their preferences and we will suggest charities from our database that most closely match what they are looking for and give out additional information on the charity's cost-effectiveness and more. 
+## Gender Orientedness
 
 ## Motivation
-The motivation behind this project was to combine multiple charity sources and extend their original functionalities to have a database of searchable, topically diverse, and cost-effective charities.
 
-- *Searchable*: Charity evaluators often recommended charities, but did not make their data available in a structured and searchable manner. We extracted their data and processed it in a way that would allow users to navigate these charities easier and find what they were looking for. 
-- *Topically diverse*: Our sources consist of charity evaluators focusing on animal charities, charities with high cost-efficiency, longterm impact charities and a more broad evaluator. By bringing those different approaches together and fitting them into one database, we offer a wide range of charities to explore.
-- *High quality charities and detailed cost-efficiency information*: By sourcing only from known charity evaluators we ensure that the charities we recommend are high-quality. We also sourced detailed cost-effectiveness analysis of each charity for the user to inspect themselves. 
-
-Another major point of consideration was to make picking a high-quality charity as easy as possible. One major obstacle to effective giving is the effort required to look through different evaluators and find the right charity to donate to. Our website provides easy access to these functionalities and does not require users to have coding knowledge in order to make it more accessible. 
 
 ## Features
 
@@ -34,6 +23,12 @@ Another major point of consideration was to make picking a high-quality charity 
 
 ## Project Details
 
+Author: Emma Stein
+Supervisors: [Dr. Terry Ruas](https://terryruas.com/), [Jan Philip Wahle](https://jpwahle.com/)
+Project Module: B.DH.21, Summer Semester 2024
+Contact: emma.stein@stud.uni-goettingen.de
+
+For more projects related to AI Safety and Natural Language Processing you can have a look at the GippLab [here](https://gipplab.org/)
 
 
 ## Data Sources/ Acknowledgements
