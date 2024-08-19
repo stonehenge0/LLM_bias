@@ -1,11 +1,8 @@
 <br>
-<br>
-<a href="https://github.com/DenverCoder1/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=cyan&size=25&center=true&vCenter=true&width=900&height=100&lines=How+do+LLMs+think+about+gender+oriented+language?..."></a>
-<br>
 
 <center>
 <div style="width:100%;text-align:center;">
-<img src='data/llama_picture_readme' width="197" height="167">  
+<img src='data/llama_picture_readme' width="400" height="300">  
 </div>
 </center>
 
@@ -13,7 +10,6 @@
 ## Gender Orientedness
 
 ## Motivation
-
 
 ## Features
 
