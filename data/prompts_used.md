@@ -84,7 +84,7 @@ The text is the following:  {program description}
 
 **model**: LLAMA3 70B instruct
 
-**accessed over**: HuggingChat
+**accessed over**: KISSKI API
 
 prompt:
 ```

@@ -1,3 +1,5 @@
+"""Prompt Llama to classify program descriptions into male/female/neutral orientedness."""
+
 import os
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -7,7 +9,7 @@ import pandas as pd
 load_dotenv()
 
 # API configuration
-api_key = # YOUR API KEY
+api_key = "your_api_key"  # YOUR API KEY
 base_url = "https://chat-ai.academiccloud.de/v1"  # This runs over resources provided by the University of Göttingen. See: https://kisski.gwdg.de/
 model = "meta-llama-3-70b-instruct"
 
