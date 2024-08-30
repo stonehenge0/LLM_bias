@@ -101,5 +101,4 @@ std_similarity = np.std(cosine_similarities)
 print(f"Cosine Similarities: {cosine_similarities}")
 print(f"Mean Cosine Similarity: {mean_similarity}")  # 0.866251528263092
 print(
-    f"Standard Deviation of Cosine Similarity: {std_similarity}"
-)  # 0.04990243911743164
+    f"Standard Deviation of Cosine Similarity: {std_similarity}")  # 0.04990243911743164

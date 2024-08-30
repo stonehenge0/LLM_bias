@@ -96,4 +96,4 @@ agreement_percentage = compare_columns_percentage(
 )
 print(
     f"The percentage of matches is: {agreement_percentage:.2f}%"
-)  # 26.67% agreement on the classification for the paraphrased progrma descriptions.
+)  # 26.67% agreement on the classification for the paraphrased program descriptions.
