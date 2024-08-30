@@ -2,7 +2,7 @@
 
 <center>
 <div style="width:100%;text-align:center;">
-<img src='data/image_readme.png' width="400" height="300">  
+<img src='image_readme.png' width="600" height="450">  
 </div>
 </center>
 
